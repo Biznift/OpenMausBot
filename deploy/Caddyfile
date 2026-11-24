@@ -7,7 +7,7 @@
 # password of its own. Caddy forwards the real Host and sets
 # X-Forwarded-For / X-Forwarded-Proto, which the server uses for the
 # same-origin rule, Secure cookies and the pairing lockout.
-{$DOMAIN} {
+http://{$DOMAIN} {
 	encode zstd gzip
 
 	# Webhook ingress is designed to be reachable by third parties (it has its
